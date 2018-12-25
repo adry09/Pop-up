@@ -1,0 +1,358 @@
+@font-face {
+  font-family: 'Gotham Pro Bold';
+  src: url('../fonts/Gotham Pro Bold.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/Gotham Pro Bold.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/Gotham Pro Bold.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/Gotham Pro Bold.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    url('../fonts/Gotham Pro Bold.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('../fonts/Gotham Pro Bold.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+  @font-face {
+    font-family: 'gothaproreg';
+    src: url('../fonts/gothaproreg.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/gothaproreg.eot?#iefix') format('embedded-opentype'),
+      /* IE6-IE8 */
+      url('../fonts/gothaproreg.woff2') format('woff2'),
+      /* Super Modern Browsers */
+      url('../fonts/gothaproreg.woff') format('woff'),
+      /* Pretty Modern Browsers */
+      url('../fonts/gothaproreg.ttf') format('truetype'),
+      /* Safari, Android, iOS */
+      url('../fonts/gothaproreg.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+
+}
+
+*{
+    box-sizing: border-box;
+      -webkit- box-sizing: border-box; /*Chrome & Safari*/
+      -moz- box-sizing: border-box; /*Firefox*/
+      -ms- box-sizing: border-box; /*IE*/
+      -o- box-sizing: border-box; /*Opera*/
+}
+html, body {
+  position: relative;
+  height: 100%;
+
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: -webkit-linear-gradient(180deg, #ff993a 0%, #ffe036 100%);
+  background-image: -moz-linear-gradient(180deg, #ff993a 0%, #ffe036 100%);
+  background-image: -ms-linear-gradient(180deg, #ff993a 0%, #ffe036 100%);
+  background-image: -o-linear-gradient(180deg, #ff993a 0%, #ffe036 100%);
+  background-image: linear-gradient(180deg, #ff993a 0%, #ffe036 100%);
+}
+
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+/*NAVIGATION*/
+
+
+
+nav {
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.menu-holder {
+  float: right;
+}
+
+.menu-holder ul {
+  display: flex;
+  align-items: center;
+}
+
+.menu-holder ul li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.menu-holder ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Gotham Pro Bold', sans-serif;
+  font-size: 16px;
+  display: block;
+}
+
+.menu-holder ul li a:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.menu-holder ul li a img {
+  height: 50px;
+  width: 150px;
+}
+
+.content {
+  clear: both;
+}
+
+/******POP-UP********/
+
+.blur-it {
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
+/* #modalWindow {
+  position: fixed;
+  font-family: 'gothaproreg';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 99999
+  opacity: 0;
+  transition: opacity 400ms lisear;
+  pointer-events: none;
+}
+
+#modalWindow:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#modalWindow > div {
+  width: 70%;
+  /* height: 420px; */
+  /* position: relative;
+  margin: 10% auto;
+  padding: 50px;
+  background: #fff;
+}
+
+#modalWindow .pop-up-close{
+  position: absolute;
+  top: -55px;
+  right: 0;
+  background: url(../images/cross-white.png) 50% 50% no-repeat;
+  height: 36px;
+  width: 36px;
+  cursor: pointer; */
+  /* transition: .3s ease background; */
+/* } */
+/*
+#modalWindow .pop-up-close:hover{
+  background: url(../images/cross.png) 50% 50% no-repeat;
+}
+
+#modalWindow .description h1{
+  font-size: 62px;
+  font-family: 'Gotham Pro Bold';
+  margin-top: 0;
+}
+
+#modalWindow .description p{
+  font-size: 15px;
+  line-height: 2;
+}
+
+#modalWindow .description span{
+  font-family: 'Gotham Pro Bold', sans-serif;
+}
+
+#modalWindow .contact-info{
+  text-decoration: none;
+  color: #000;
+  font-family: 'Gotham Pro Bold', sans-serif;
+  position: relative;
+} */
+
+/***Underline Effect***/
+/* #modalWindow .contact-info::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -5px;
+  left: 0;
+  -webkit-transition: all .5s ease-in-out 0s;
+  transition: all .5s ease-in-out 0s;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  visibility: hidden;
+}
+
+#modalWindow .contact-info:hover::after{
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+} */
+
+
+/* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 150px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+
+      background: rgba(255, 255, 255, 0.4);
+
+  }
+
+  /* Modal Content */
+  .modal-content {
+      font-family: 'gothaproreg';
+      background-color: #fefefe;
+      margin: auto;
+      /* padding: 50px; */
+      /* border: 1px solid #888; */
+      width: 70%;
+  }
+
+  /* The Close Button */
+  /* .pop-up-close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .pop-up-close:hover,
+  .pop-up-close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  } */
+
+ .close{
+    position: absolute;
+    top: 95px;
+    right: 286px;
+    background: url(../images/cross-white.png) 50% 50% no-repeat;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    /* transition: .3s ease background; */
+  }
+
+  .close:hover{
+    background: url(../images/cross.png) 50% 50% no-repeat;
+  }
+
+.description{
+  width: 100%;
+    padding: 60px;
+}
+
+.description h1{
+    font-size: 62px;
+    font-family: 'Gotham Pro Bold';
+    margin-top: 0;
+  }
+
+.description p{
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .description p:last-of-type{
+      margin-bottom: 0;
+    }
+
+.description h1{
+    font-family: 'Gotham Pro Bold', sans-serif;
+  }
+
+.contact-info{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Gotham Pro Bold', sans-serif;
+    position: relative;
+  }
+
+  /***Underline Effect***/
+.contact-info::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    bottom: -5px;
+    left: 0;
+    -webkit-transition: all .5s ease-in-out 0s;
+    transition: all .5s ease-in-out 0s;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    visibility: hidden;
+  }
+
+.contact-info:hover::after{
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+      transform: scaleX(1);
+  }
+
+/*TITLE*/
+.title h1 {
+  font-size: 5em;
+  font-family: 'Gotham Pro Bold', sans-serif;
+  color: #fff;
+  width: 51%;
+  margin-top: 100px;
+}
+
+/*CAROUSEL*/
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}

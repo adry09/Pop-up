@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+<script src="float-panel.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.esm.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.esm.bundle.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css" />
+
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+
+      <div class="class=" header-grid sticky-header"">
+      </div>
+
+      <div class="container">
+        <nav>
+
+
+
+            <div class="logo">
+              <img src="./images/logo.svg" alt="pupsocial">
+            </div>
+            <div class="menu-holder">
+              <ul>
+                <li><a class="myBtn_multi" id="trigger">About</a></li>
+                <li><a class="myBtn_multi">Guidelines</a></li>
+                <li><a href="">Subscribe</a></li>
+                <li><a href="https://itunes.apple.com/us/genre/ios/id36?mt=8" target="_blank"><img src="./images/appstore-icon.png" alt="" /></a></li>
+              </ul>
+            </div>
+
+            <div class="hamburger"></div>
+
+        </nav>
+
+
+        <div class="content">
+          <div class="title">
+            <h1>PupSocial connects proud dog parents and their pups in the area</h1>
+          </div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./images/01.png" alt=""></div>
+              <div class="swiper-slide"><img src="./images/02.png" alt=""></div>
+              <div class="swiper-slide"><img src="./images/03.png" alt=""></div>
+              <div class="swiper-slide"><img src="./images/04.png" alt=""></div>
+              <div class="swiper-slide"><img src="./images/05.png" alt=""></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal modal_multi about">
+        <div class="modal-content">
+          <span class="close"></span>
+          <div class="description">
+            <h1>About</h1>
+            <p>PupSocial platform has been created for all dog owners and their pups to unite, make new friends and relationships, and connect with people who share the same interest – a love for dogs. The app facilitates communication between dog
+              parents in your area.
+              Whether you have a question, need advice from another parent, or want to meet in real life and establish new meaningful relationships, this app is the perfect tool to do it all.</p>
+            <p><span>The cause we care deeply about</span><br>
+              While we all have fun here, we are aware that some dogs are less fortunate than others. Having witnessed homeless and hungry dogs firsthand,
+              we commit ourselves to help minimize this horrific problem in less well-off and less-regulated countries. We believe that every dog deserves to have a place to live,
+              eat, and feel loved. This is why part of our profit will go to save a dog, one life at a time.</p>
+            <p>For more information,
+              comments and feedback, please email us at<br>
+              <a class="contact-info" href="mailto:contact@pupsocialapp.com">contact@pupsocialapp.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal_multi">
+        <div class="modal-content">
+          <span class="close"></span>
+          <div class="description">
+            <h1>Guidelines</h1>
+
+            <p>1. When registering, for the time being our app only uses Facebook. We will never post anything on your behalf. We use Facebook to make your experience faster and secure. </p>
+            <p>2. Create a profile for you and your pup</p>
+            <p>3. Swipe through the pictures to look for dog owners and their dogs near you. </p>
+            <p>4. Found someone you want to hang out with? Send them an invite to go for a walk. If your invitation is accepted, you will be able to chat with them and arrange the details. The invite will expire in 24 hours if it isn’t accepted. </p>
+            <p>5. Like someone and would like to stay in touch? Send a friend request and chat inside the app. </p>
+            <p>6. ave a party or special occasion for a gathering coming up? Create a meet up group… and let's all have fun! </p>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+  </div>
+
+
+  <script>
+    /***POP-UP***/
+
+    // Get the modal
+
+    var modalparent = document.getElementsByClassName("modal_multi");
+
+    // Get the button that opens the modal
+
+    var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
+
+    // Get the <span> element that closes the modal
+    var span_close_multi = document.getElementsByClassName("close");
+
+    // When the user clicks the button, open the modal
+    function setDataIndex() {
+
+      for (i = 0; i < modal_btn_multi.length; i++) {
+        modal_btn_multi[i].setAttribute('data-index', i);
+        modalparent[i].setAttribute('data-index', i);
+        span_close_multi[i].setAttribute('data-index', i);
+      }
+    }
+
+
+
+    for (i = 0; i < modal_btn_multi.length; i++) {
+      modal_btn_multi[i].onclick = function() {
+        var ElementIndex = this.getAttribute('data-index');
+        modalparent[ElementIndex].style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span_close_multi[i].onclick = function() {
+        var ElementIndex = this.getAttribute('data-index');
+        modalparent[ElementIndex].style.display = "none";
+      };
+
+    }
+
+    window.onload = function() {
+
+      setDataIndex();
+    };
+
+    window.onclick = function(event) {
+      if (event.target === modalparent[event.target.getAttribute('data-index')]) {
+        modalparent[event.target.getAttribute('data-index')].style.display = "none";
+      }
+
+      // OLD CODE
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+
+    // $(document).ready(function() {
+    //        $('#trigger').on('click', function() {
+    //            $('.container').toggleClass('blur-it');
+    //
+    //        });
+    //    });
+
+
+    //        // Get the modal
+    //
+    //         var modal = document.getElementById("modal_multi");
+    //
+    // // Get the button that opens the modal
+    //         var a = document.getElementById("myBtn_multi");
+    //
+    // // Get the <span> element that closes the modal
+    //         var span = modal.getElementsByClassName("close")[0]; // Modified by dsones uk
+    //
+    // // When the user clicks on the button, open the modal
+    //
+    //         a.onclick = function() {
+    //
+    //             modal.style.display = "block";
+    //         }
+    //
+    // // When the user clicks on <span> (x), close the modal
+    //         span.onclick = function() {
+    //             modal.style.display = "none";
+    //         }
+
+
+    /***CAROUSEL***/
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+
+</html>
